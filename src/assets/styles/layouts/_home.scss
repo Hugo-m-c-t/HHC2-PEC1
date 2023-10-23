@@ -1,57 +1,321 @@
+// Añadir el padding y bordes al tamaño total de todos los elementos de la página
+
 * {
   box-sizing: border-box;
 }
 
-body {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  margin: 0;
-  padding: 2rem;
+.cuerpo {
+  background-color: $pixel-fondo;
   font-family: $font-family-sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  background-color: $uoc-bg;
-  color: $uoc-corporate;
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-.uoc-container {
-  max-width: 800px;
-  margin: auto;
-  padding: 2rem;
-  border-radius: 2rem;
-  text-align: center;
-  background-color: #fff;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06);
-}
-
-.uoc-logo {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 1.5rem;
-  max-width: 200px;
-  height: auto;
-
-  @media (min-width: $mqMinWidth) {
-    max-width: none;
+@media only screen and (min-width: 1440px) {
+  .bloque-principal{
+    margin-top: 6rem;
   }
 }
 
-.uoc-title {
-  font-family: $font-family-serif;
-  font-size: 24px;
-  font-weight: 700;
-  color: $uoc-corporate;
+// Bloques del encabezado y del pie.
 
-  @media (min-width: $mqMinWidth) {
-    font-size: 36px;
-  }
+.encabezado {
+  margin-bottom: 2rem;
 }
 
-.uoc-footer {
-  margin-top: 1.5rem;
+.pie {
+  margin: 1rem 1.5rem;
   font-size: 0.75rem;
   text-align: center;
 }
+
+@media only screen and (min-width: 768px) {
+  .pie {
+    font-size: 1rem;
+  }
+}
+
+// Bloques del título/logo y del menú de navegación principal.
+
+.titulo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.titulo__texto {
+  color: $pixel-highlight;
+  font-size: 3rem;
+}
+
+.nav-principal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-principal__link {
+  text-decoration: none;
+  color: $pixel-links;
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 0.6rem;
+
+  &:hover {
+    color: $pixel-links-hover;
+    transform: scale(1.1);
+  }
+
+  &:visited {
+    color: $pixel-links-used;
+  }
+
+}
+
+/* Ajustes web responsive: Cambios al menú de navegación principal y al encabezado completo, 
+  para que permanezca visible en pantallas mayores de 1440px de anchura. */
+
+@media only screen and (min-width: 1024px) {
+
+  .nav-principal {
+    max-width: 80%;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+}
+
+@media only screen and (min-width: 1440px) {
+
+  .encabezado {
+    background-color: $pixel-fondo-nav;
+    box-shadow: 0 4px 12px -6px #157ec0;
+    position: fixed;
+    margin: 0 auto; 
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 4rem;
+  }
+
+  .nav-principal {
+    max-width: fit-content;
+    margin: 0;
+  }
+
+  .nav-principal__link {
+    padding: 1rem;
+  }
+}
+
+// Bloques de sección en los que se divide la página, a los que lleva el menú de navegación.
+
+.contenedor-seccion {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contenedor-seccion__titulo {
+  color: $pixel-highlight;
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 4rem;
+  margin-bottom: 0.5rem;
+}
+
+.contenedor-seccion__texto {
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+  max-width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media only screen and (min-width: 425px) {
+  .contenedor-seccion__texto {
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .contenedor-seccion__titulo {
+    width: fit-content;
+    text-align: left;
+    margin-left: 12%;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .contenedor-seccion__texto {
+    max-width: 50%;
+  }
+  .contenedor-seccion__titulo {
+    width: fit-content;
+    text-align: left;
+    margin-left: 25%;
+  }
+}
+
+.contenedor-seccion__texto__link {
+  text-decoration: none;
+  color: $pixel-links;
+}
+
+// Bloque de las imágenes.
+
+.galeria {
+display: block;
+}
+
+.galeria__imagen {
+  max-width: 100%;
+  max-height: 100%;
+  margin-bottom: 1rem;
+  border: 5px solid $pixel-highlight;
+  box-shadow: 0 7px 10px -5px $pixel-links;
+}
+
+.galeria__pie {
+  color: $pixel-highlight;
+}
+
+@media only screen and (min-width: 425px) {
+  .galeria__pie {
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .galeria {
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .galeria {
+    max-width: 60%;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .galeria {
+    max-width: 40%;
+  }
+}
+
+// Bloque de datos interesantes, separados del texto general.
+
+.contenedor-datos {
+  background-color: white;
+  color: $pixel-links;
+  border: 5px solid $pixel-highlight;
+  border-radius: 10px;
+}
+
+.contenedor-datos__titulo {
+  font-size: 1.6rem;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0.5rem;
+}
+
+.contenedor-datos__texto {
+  font-size: 1.2rem;
+  text-align: justify;
+  line-height: 2rem;
+  max-width: 80%;
+  margin-top: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media only screen and (min-width: 768px) {
+  .contenedor-datos {
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .contenedor-datos {
+    max-width: 40%;
+  }
+}
+
+.contenedor-datos__texto--nota {
+  font-size: 1rem;
+  line-height: 1rem;
+}
+
+// Bloque de preguntas y respuestas
+
+.contenedor-pregunta {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+  background-color: $pixel-fondo-preguntas;
+  border-radius: 10px;
+}
+
+.contenedor-pregunta__pregunta {
+  color: white;
+  max-width: 80%;
+}
+
+.contenedor-pregunta__respuesta {
+  font-family: $font-family-sans-serif;
+  background-color: $pixel-fondo;
+  border: 2px solid white;
+  border-radius: 4px;
+  padding: 8px;
+  max-width: 80%;
+  margin-bottom: 2rem;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+}
+
+.contenedor-pregunta__respuesta--desvelada {
+  background-color: white;
+}
+
+@media only screen and (min-width: 768px) {
+
+  .contenedor-pregunta {
+    width: 60%;
+  }
+
+  .contenedor-pregunta__pregunta {
+    font-size: 1.4rem;
+  }
+
+  .contenedor-pregunta__respuesta {
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+
+  .contenedor-pregunta {
+    width: 40%;
+  }
+}
+

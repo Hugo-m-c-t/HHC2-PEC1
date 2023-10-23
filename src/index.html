@@ -5,22 +5,296 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
-    <title>UOC Boilerplate</title>
+    <title>Pixelart - Hugo Manjón-Cabeza Taillefer</title>
   </head>
-  <body>
-    <div class="uoc-container">
-      <picture>
-        <source srcset="./assets/images/logo.png?as=webp&width=350" type="image/webp" />
-        <img src="./assets/images/logo.png?width=350" alt="Universitat Oberta de Catalunya" class="uoc-logo" />
-      </picture>
-      <h1 class="uoc-title">Hello, UOC!</h1>
-      <p>
-        This is a starter template for the Advanced HTML and CSS Tools courses
-        from the Master's Program in Multimedia Applications and the Master's
-        Program in Web App and Website Development at the Universitat Oberta de
-        Catalunya.
-      </p>
-    </div>
+  <body class="cuerpo">
+    <header class="encabezado">
+      <div class="titulo">
+        <img src="assets/images/Logo2023.png" alt="Logo de Hugo Manjón-Cabeza Taillefer" height="60px">
+        <h1 class="titulo__texto">'s Pixelart</h1>
+      </div>
+      <nav class="nav-principal">
+          <a class="nav-principal__link" href="#QueEs">¿Qué es?</a>
+          <a class="nav-principal__link" href="#MiProgreso">Mi progreso</a>
+          <a class="nav-principal__link" href="#ComoEmpezar">Cómo empezar</a>
+          <a class="nav-principal__link" href="#Galeria">Galería</a>
+          <a class="nav-principal__link" href="#DatosExtra">Datos extra</a>
+      </nav>
+    </header>
+    <main class="bloque-principal">
+      <div class="contenedor-seccion">
+
+        <h2 class="contenedor-seccion__titulo" id="QueEs"><i class="fa-regular fa-circle-question" style="color: #e62e4b;"></i> Qué es el "Pixelart"</h2>
+
+        <p class="contenedor-seccion__texto">El pixelart es un estilo de arte parecido a los mosaicos. Se construye con piezas cuadradas que 
+          llegan a crear una forma mayor con otro sentido y juega con el tamaño para variar sus intenciones. 
+          Si te acercas demasiado, puede ser complicado distinguir la figura, y si te alejas, ni siquiera 
+          se apreciarán los píxeles.</p>
+
+        <p class="contenedor-seccion__texto">Los colores también forman una gran parte del atractivo de este tipo de arte, debido a su propósito. 
+          Los primeros videojuegos gráficos (los que se crearon tras los que estaban basados en texto) 
+          utilizaban este tipo de arte por distintos motivos, pero principalmente por su mínimo consumo de 
+          recursos.</p>
+          
+        <p class="contenedor-seccion__texto">Una idea equivocada que nos encontramos hoy en día es que el arte con píxeles debe igualarse 
+        al estilo de los artistas predecesores, pero aquellos que piensan así no han tenido en cuenta el aspecto técnico de este medio. El estilo 
+        tan tosco, saturado y contrastado que tenían los videojuegos antes no era por placer, 
+        sino que se debía a las pantallas que había en aquel entonces. Las pantallas CRT, o las “televisiones 
+        de tubo” tenían sistemas de renderizado de luz y colores que aplicaban por así decirlo un suavizado, 
+        por lo que los colores contrastados se mezclaban y perdían algo de saturación.</p>
+
+        <figure class="galeria">
+          <img src="assets/images/RondoOfBlood.jpg" alt="Captura del videojuego Castlevania: Rondo of Blood (1993), comparación entre las versiones HD y CRT" class="galeria__imagen">
+          <figcaption class="galeria__pie">Castlevania: Rondo of Blood (1993) en HD (izquierda) y visto en una pantalla CRT (derecha).</figcaption>
+        </figure>
+
+        <p class="contenedor-seccion__texto">Este estilo sigue presente en los videojuegos de hoy en día, ofreciendo como atractivo 
+          el valor de la nostalgia, y algunos incluso dan la opción de superponer filtros CRT para darle ese aspecto antiguo. 
+          Por otro lado, otros juegos como <i>Blasphemous</i> toman una opción completamente distinta, eligiendo un estilo muy detallado 
+          en el que cuesta discernir que se trata siquiera de pixelart al primer vistazo, lo que ha provocado que muchos nieguen 
+          que se deba considerar como tal. </p>
+
+        <figure class="galeria">
+          <img src="assets/images/Blasphemous2.jpg" alt="Captura del videojuego Blasphemous 2 (2023)" class="galeria__imagen">
+          <figcaption class="galeria__pie">Captura del videojuego Blasphemous 2 (2023).</figcaption>
+        </figure>
+
+        <p class="contenedor-seccion__texto">Por último, hay que destacar que también podemos encontrar pixelart en el mundo real. 
+          Desde grafitis hasta productos comerciales como los mosaicos de LEGO y las cuentas de plástico que se planchan.</p>
+
+        <figure class="galeria">
+          <img src="assets/images/grafiti1.jpg" alt="Mosaico estilo pixelart de alien retro." class="galeria__imagen">
+          <figcaption class="galeria__pie">Mosaico de alien retro en Málaga, por el artista francés “Invader”. </figcaption>
+        </figure>
+
+        <figure class="galeria">
+          <img src="assets/images/grafiti2.jpg" alt="Mosaico estilo pixelart de ballena." class="galeria__imagen">
+          <figcaption class="galeria__pie">Mosaico de ballena en Málaga, por el artista francés “Invader”. </figcaption>
+        </figure>
+
+        <blockquote class="contenedor-datos">
+          <h3 class="contenedor-datos__titulo">Simpleza del Pixelart</h3>
+          <p class="contenedor-datos__texto">Hoy en día, una pieza de arte digital puede pesar más de 100 megabytes, mientras que un sprite* 
+            de pixelart, incluso escalado a tamaño de pantalla, no pasa de los 100 kilobytes (mil veces menor tamaño).</p>
+          <p class="contenedor-datos__texto contenedor-datos__texto--nota">*sprite: Objeto gráfico 2D normalmente utilizado en videojuegos.</p>
+        </blockquote>
+
+        <p class="contenedor-seccion__texto">¿Qué se considera pixelart? ¿Deja de serlo al alcanzar cierto tamaño? 
+          ¿Hay que usar cierto estilo de sombreado? ¿Tiene que ser digital (para que tenga píxeles reales)?
+          ¿Tiene que estar siquiera formado por cuadrados? A fin de cuentas, un estilo tan marcado por su propósito original 
+          y limitaciones técnicas siempre tendrá opiniones dispares. </p>
+
+      </div>
+      
+      <div class="contenedor-seccion">
+
+        <h2 class="contenedor-seccion__titulo" id="MiProgreso"><i class="fa-regular fa-pen-to-square" style="color: #e62e4b;"></i> Mi Progreso</h2>
+
+        <p class="contenedor-seccion__texto">Comencé a dibujar pixelart entre 2018 y 2019, al empezar mi carrera universitaria. 
+          Siempre me había interesado el arte, pero hasta ese momento no lo había probado de verdad. Debido a que no tenía 
+          ni idea de cómo usar un pincel ni tenía otros medios disponibles, pensé que el pixelart podría ser un buen sitio 
+          para empezar ya que me interesaba ese estilo y podía dibujar en el teléfono móvil. Sin embargo, esto hizo que aprendiese 
+          específicamente este estilo, ignorando otros conceptos artísticos como composición, perspectiva, etc. 
+          que estudiaría tiempo más tarde.</p>
+
+        <p class="contenedor-seccion__texto">Como fan de videojuegos y del anime, me decanté mucho por el “fanart”, lo que 
+          me permitió aprender especialmente sobre color y diseño. En un principio dibujaba cualquier cosa (escenarios, 
+          retratos, imitaciones de juegos, etc.) pero con el tiempo sin darme cuenta me fui encaminando hacia los 
+          sprites y las animaciones.</p>
+
+        <figure class="galeria">
+          <img src="assets/images/Animales.gif" alt="Animación de animales pixelart corriendo." class="galeria__imagen">
+          <figcaption class="galeria__pie">Animaciones de animales corriendo realizadas para la aplicación Pixel Pals (2022, iPhone/iPad).</figcaption>
+        </figure>
+
+        <p class="contenedor-seccion__texto">Recomiendo probar el pixelart más que nada porque es muy fácil de empezar 
+          y es un buen pasatiempo. Debido a que los cuadrados normalmente se colocan de uno en uno, puedes pasarte 
+          horas y horas creando.</p>
+
+        <p class="contenedor-seccion__texto">Estas dos imágenes muestran el cambio que hay entre mi obra más antigua y la más nueva que tengo 
+          almacenadas en mi ordenador.</p>
+
+        <figure class="galeria">
+          <img src="assets/images/obra1.png" alt="Escenario pixelart con vista de pájaro. Se ven una casa y varios árboles." class="galeria__imagen">
+          <figcaption class="galeria__pie">Escenario con vista de pájaro (2019).</figcaption>
+        </figure>
+
+        <figure class="galeria">
+          <img src="assets/images/obra2.jpg" alt="Escenario pixelart en el que unas olas rompen contra la playa. Se ven precipicios a lo lejos." class="galeria__imagen">
+          <figcaption class="galeria__pie">Playa de Tjørnuvík, Islas Feroe (2023).</figcaption>
+        </figure>
+
+      </div>
+
+      <div class="contenedor-seccion">
+
+        <h2 class="contenedor-seccion__titulo" id="ComoEmpezar"><i class="fa-regular fa-circle-play" style="color: #e62e4b;"></i> Cómo Empezar</h2>
+
+        <p class="contenedor-seccion__texto">Hay distintos caminos a elegir según tus medios y dispositivos, 
+          aunque la mayoría de los programas tienen funciones muy similares. Si quieres una opción gratuita, 
+          <a href="https://www.pixilart.com/draw?ref=home-page" target="_blank" class="contenedor-seccion__texto__link">Pixilart</a> 
+          es una herramienta completamente online con la que puedes dibujar desde tu propio navegador, 
+          sin necesidad de crear una cuenta. Por otro lado, en dispositivos móviles puedes utilizar tanto 
+          <a href="https://play.google.com/store/apps/details?id=com.PixelStudio&hl=es&gl=US" target="_blank" class="contenedor-seccion__texto__link">Pixel Studio</a> 
+          como <a href="https://play.google.com/store/apps/details?id=net.dotpicko.dotpict&hl=es_419&gl=US" target="_blank" class="contenedor-seccion__texto__link">dotpict</a>, 
+          ambas también gratuitas.</p>
+
+        <p class="contenedor-seccion__texto">Por otro lado, en cuanto a opciones de pago el programa por excelencia en ordenadores
+          es <a href="https://store.steampowered.com/app/431730/Aseprite/" target="_blank" class="contenedor-seccion__texto__link">Aseprite</a>, 
+          que permite desde la realización de dibujos individuales a animaciones y hojas de sprites 
+          con herramientas personalizables. Si tienes iPad, también puedes crear pixelart en 
+          <a href="https://apps.apple.com/es/app/procreate/id425073498" target="_blank" class="contenedor-seccion__texto__link">Procreate</a>
+          , pero debes crear o descargar pinceles personalizados para ello.</p>
+
+        <p class="contenedor-seccion__texto">Como opción extra, ¡simplemente imprime una cuadrícula y rellena!</p>
+
+        <blockquote class="contenedor-datos">
+          <h3 class="contenedor-datos__titulo">De menos a más</h3>
+          <p class="contenedor-datos__texto">Comienza tus dibujos en un canvas pequeño, y ve expandiéndolo a medida que lo necesites.
+             Esto te “forzará” a que intentes expresar el máximo detalle en el menor espacio posible, uno de los objetivos del pixelart.</p>
+        </blockquote>
+
+        <p class="contenedor-seccion__texto">Una vez descargado uno de los programas, abres un archivo y te encuentras con un canvas vacío. 
+          ¿Ahora qué? Puedes dibujar con tu imaginación o intentar replicar un objeto real u obra de arte. Un buen ejercicio es intentar 
+          replicar diseños de <i>hama/perler beads</i> (las cuentas de plástico que se planchan), ya que utilizan el mismo concepto. Esto te 
+          permitirá familiarizarte con las herramientas y comprender el espacio, dimensiones y abstracción de este estilo de arte.</p>
+
+          <blockquote class="contenedor-datos">
+            <h3 class="contenedor-datos__titulo">Calculando dimensiones</h3>
+            <p class="contenedor-datos__texto">Para calcular el tamaño exacto que debe tener tu obra, un buen truco es empezar 
+              con la parte más pequeña para ver qué nivel de detalle le quieres dar. Por ejemplo, en un retrato lo más pequeño 
+              que querrás detallar seguramente serán los ojos, por lo que si te aseguras de que estos tengan el nivel de complejidad suficiente
+              podrás crear el resto de la obra siguiendo las proporciones y no tendrás ninguna parte sin el detalle necesario. </p>
+          </blockquote>
+
+          <p class="contenedor-seccion__texto">Finalmente, te recomiendo aprender sobre algunos conceptos que te permitirán 
+            comprender técnicas imprescindibles como el <i>dithering</i>, y otras que debes evitar a toda costa como el <i>pillow shading</i> 
+            y el <i>banding</i>. En este blog encontrarás dichos términos, y además contiene cientos de artículos y tutoriales que te ayudarán 
+            a comprender este estilo de arte. Es una especie de Santo Grial para todos los que comienzan en este mundo, y está 
+            creado por la empresa que produjo el aclamado videojuego <i>Celeste</i> (2018).</p>
+      </div>
+
+      <div class="contenedor-seccion">
+
+        <h2 class="contenedor-seccion__titulo" id="Galeria"><i class="fa-solid fa-paintbrush" style="color: #e62e4b;"></i> Galería</h2>    
+
+        <p class="contenedor-seccion__texto">Esta es una colección de algunas de mis obras, 2021-2023</p>
+
+        <figure class="galeria">
+          <img src="assets/images/galeria/SpellBook.png" alt="Libro pixelart rodeado por símbolos mágicos." class="galeria__imagen">
+          <figcaption class="galeria__pie">Libro de hechizos.</figcaption>
+        </figure>
+
+        <figure class="galeria">
+          <img src="assets/images/galeria/iconos271222.png" alt="Iconos pixelart en tamaño 8x8 px" class="galeria__imagen">
+          <figcaption class="galeria__pie">Iconos varios.</figcaption>
+        </figure>
+
+        <figure class="galeria">
+          <img src="assets/images/galeria/Badges160123.png" alt="Iconos pixelart en tamaño 16x16 px" class="galeria__imagen">
+          <figcaption class="galeria__pie">Iconos varios.</figcaption>
+        </figure>
+
+        <figure class="galeria">
+          <img src="assets/images/galeria/Cowboys.png" alt="Escenario pixelart de unos cowboys entrando a una ciudad." class="galeria__imagen">
+          <figcaption class="galeria__pie">Cowboys.</figcaption>
+        </figure>
+
+        <figure class="galeria">
+          <img src="assets/images/galeria/hOCKEY.png" alt="Jugador de hockey sobre hielo estilo pixelart." class="galeria__imagen">
+          <figcaption class="galeria__pie">Hockey sobre hielo.</figcaption>
+        </figure>
+
+        <figure class="galeria">
+          <img src="assets/images/galeria/Minis241122.png" alt="Personajes de cultura popular en estilo pixelart." class="galeria__imagen">
+          <figcaption class="galeria__pie">Estilo mini.</figcaption>
+        </figure>
+
+        <figure class="galeria">
+          <img src="assets/images/galeria/King Poli Final.png" alt="Sprite pixelart de un diseño de Pokémon descartado" class="galeria__imagen">
+          <figcaption class="galeria__pie">Interpretación pixelart del diseño descartado de Poliwrath (Pokémon).</figcaption>
+        </figure>
+
+        <figure class="galeria">
+          <img src="assets/images/galeria/Franky and Sisters.png" alt="Escenario pixelart imitando una escena del anime One Piece." class="galeria__imagen">
+          <figcaption class="galeria__pie">Recreación de escena del anime One Piece.</figcaption>
+        </figure>
+
+        <figure class="galeria">
+          <img src="assets/images/galeria/Kaido.png" alt="Escenario pixelart imitando una escena del anime One Piece." class="galeria__imagen">
+          <figcaption class="galeria__pie">Recreación de escena del anime One Piece.</figcaption>
+        </figure>
+
+        <figure class="galeria">
+          <img src="assets/images/galeria/One Piece Humans.png" alt="Sprites pixelart de los personajes principales de One Piece." class="galeria__imagen">
+          <figcaption class="galeria__pie">Fanart de One Piece.</figcaption>
+        </figure>
+
+        <figure class="galeria">
+          <img src="assets/images/galeria/Gyro and Johnny 2.png" alt="Escenario pixelart de un desierto con dos personas." class="galeria__imagen">
+          <figcaption class="galeria__pie">Fanart de Jojo's Bizarre Adventure: Steel Ball Run.</figcaption>
+        </figure>
+
+      </div>
+      
+      <div class="contenedor-seccion">
+
+        <h2 class="contenedor-seccion__titulo" id="DatosExtra"><i class="fa-regular fa-file-lines" style="color: #e62e4b;"></i> Datos Extra</h2>   
+
+        <p class="contenedor-seccion__texto">Ya que has llegado hasta aquí, ¿qué tal unos datos más? 
+          Estas son algunas preguntas sobre pixelart y conceptos que no he llegado a explicar.
+          Prueba a responderlas, y desvela la respuesta cuando estés listo/a!</p>
+
+        <div class="contenedor-pregunta">
+          <h3 class="contenedor-pregunta__pregunta">¿Cuántos píxeles componen un canvas de 32 x 32?</h3>
+          <button class="contenedor-pregunta__respuesta" value="0">Desvelar</button>
+        </div>
+
+        <div class="contenedor-pregunta">
+          <h3 class="contenedor-pregunta__pregunta">¿Qué cualidad del color determina su intensidad?</h3>
+          <button class="contenedor-pregunta__respuesta" value="1">Desvelar</button>
+        </div>
+
+        <div class="contenedor-pregunta">
+          <h3 class="contenedor-pregunta__pregunta">¿Qué cualidad del píxel determina su grado de visibilidad?</h3>
+          <button class="contenedor-pregunta__respuesta" value="2">Desvelar</button>
+        </div>
+
+        <div class="contenedor-pregunta">
+          <h3 class="contenedor-pregunta__pregunta">¿Cómo se llaman los gráficos 2D que se utilizan de forma 
+            individual o secuencial para hacer animaciones en videojuegos?</h3>
+          <button class="contenedor-pregunta__respuesta" value="3">Desvelar</button>
+        </div>
+
+        <div class="contenedor-pregunta">
+          <h3 class="contenedor-pregunta__pregunta">¿Cuántos colores podía mostrar la consola portátil “Game Boy”?</h3>
+          <button class="contenedor-pregunta__respuesta" value="4">Desvelar</button>
+        </div>
+
+        <div class="contenedor-pregunta">
+          <h3 class="contenedor-pregunta__pregunta">¿Qué es el dithering?</h3>
+          <button class="contenedor-pregunta__respuesta" value="5">Desvelar</button>
+        </div>
+
+        <div class="contenedor-pregunta">
+          <h3 class="contenedor-pregunta__pregunta">¿Qué es el banding?</h3>
+          <button class="contenedor-pregunta__respuesta" value="6">Desvelar</button>
+        </div>
+
+        <div class="contenedor-pregunta">
+          <h3 class="contenedor-pregunta__pregunta">¿Qué es el pillow shading?</h3>
+          <button class="contenedor-pregunta__respuesta" value="7">Desvelar</button>
+        </div>
+
+        <div class="contenedor-pregunta">
+          <h3 class="contenedor-pregunta__pregunta">¿Qué técnica se utiliza para suavizar la diferencia 
+            entre dos objetos en una composición (válido para videojuegos y pixelart en general)?</h3>
+          <button class="contenedor-pregunta__respuesta" value="8">Desvelar</button>
+        </div>
+      
+      </div>
+
+    </main>
     <include src="./views/footer.html"></include>
     <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
   </body>

@@ -1,12 +1,16 @@
 @use "sass:color";
 
-$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-  "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-  "Segoe UI Symbol";
-$font-family-serif: "Georgia", "Times New Roman", serif;
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap');
 
-$uoc-corporate: #000078;
-$uoc-masterbrand: #73edff;
-$uoc-bg: color.scale($uoc-masterbrand, $lightness: 70%);
+$font-family-sans-serif: "Lato", sans-serif;
 
-$mqMinWidth: 420px;
+$pixel-fondo: #F1FAEE;
+$pixel-texto: #1D3557;
+$pixel-highlight: #E63946;
+$pixel-links: #157ec0;
+$pixel-links-hover: #A8DADC;
+$pixel-links-used: #4f5888;
+$pixel-fondo-preguntas: color.adjust($pixel-links, $alpha: -0.4);
+$pixel-fondo-nav: color.adjust($pixel-fondo, $hue: -2deg);
+
+
